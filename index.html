@@ -51,17 +51,32 @@
             <div class="col-md-8" style="height: 100vh;">
                 
                 <!-- Main Image -->
-		<svg class="img-responsive" 
-		     viewBox="0 0 2792 4280" 
-		     preserveAspectRatio="xMidYMid slice"
-		     style="width: 277px;
-		            height: 400px;
-		            image-rendering: crisp-edges;">
-		  <image width="2792" 
-		         height="4280" 
-		         href="image.jpeg"
-		         preserveAspectRatio="none"/>
-		</svg>
+		<div class="responsive-image">
+		  <img src="image.jpeg" 
+		       alt="Responsive Image"
+		       style="width: 100%; height: auto;
+		              image-rendering: -webkit-optimize-contrast;
+		              image-rendering: crisp-edges;">
+		</div>
+		
+		<style>
+		.responsive-image {
+		  max-width: 900px;  /* 设置最大显示宽度 */
+		  margin: 0 auto;
+		  overflow: hidden;
+		  border-radius: 4px;
+		  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		}
+		
+		/* 针对高分辨率屏幕优化 */
+		@media 
+		(-webkit-min-device-pixel-ratio: 2), 
+		(min-resolution: 192dpi) { 
+		  img {
+		    image-rendering: crisp-edges;
+		  }
+		}
+		</style>
                 
 	<div style="margin-top:3%; text-align:justify;">                
 	    <p>As an undergraduate at Wuhan University, I am passionate about applying <strong>artificial intelligence (AI)</strong> and <strong>computer vision</strong> to advance intelligent systems, particularly in <strong>autonomous driving</strong> and <strong>geospatial analytics</strong>.</p>
